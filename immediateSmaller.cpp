@@ -31,3 +31,8 @@ int main(){
 	int x = 16;
 	cout<<immediateSmaller(arr,n,x)<<endl;
 }
+
+
+Output
+
+15
