@@ -1,17 +1,6 @@
-// { Driver Code Starts
 #include<bits/stdc++.h>
 using namespace std;
-
-
- // } Driver Code Ends
-
-
-// Function to find subarray with maximum sum
-// arr: input array
-// n: size of array
 int maxSubarraySum(int arr[], int n){
-    
-    // Your code here
     int max1 = INT_MIN , max2 = 0; //max2 = max_ending_here max1 = max_so far
     for(int i=0;i<n;i++){
     max2 = max2 + arr[i];
@@ -26,15 +15,12 @@ int maxSubarraySum(int arr[], int n){
     }
     return max1;
 }
-
-// { Driver Code Starts.
-
 int main()
 {
     int t,n;
     
-    cin>>t; //input testcases
-    while(t--) //while testcases exist
+    cin>>t; 
+    while(t--) 
     {
         
         cin>>n; //input size of array
