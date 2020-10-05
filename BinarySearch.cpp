@@ -1,4 +1,7 @@
-// { Driver Code Starts
+// Recursive Function For Binary Search 
+// We can write an iterative Function as well using the while loop(i.e. while(left<=right) )
+
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -22,10 +25,7 @@ int main()
         cout<<found<<endl;
     }
 }
-// } Driver Code Ends
 
-
-/*You need to complete this function */
 int bin_search(int A[] ,int left, int right, int k)
 {
     if(right>=left)
