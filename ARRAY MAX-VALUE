@@ -1,0 +1,33 @@
+Take as input N, the size of array. Take N more inputs and store that in an array. Write a function which returns the maximum value in the array. Print the value returned.
+
+1.It reads a number N.
+
+2.Take Another N numbers as input and store them in an Array.
+
+3.calculate the max value in the array and return that value.
+
+CODE ---
+
+#include<iostream>
+#include <bits/stdc++.h>
+using namespace std ;
+int max(int a[] , int N){
+	int maxim = INT_MIN;
+	for(int i=0 ; i<N; i++)
+	{
+		if( a[i]>maxim )
+		{
+		 maxim = a[i];
+		}
+	}
+	return maxim;
+}
+int main() {
+	int N;
+	cin>>N;
+	int arr[N]={0};
+	for (int i=0;i<N;i++)
+	cin>>arr[i];
+	cout<<max(arr,N)<<endl;
+    return 0;
+}
