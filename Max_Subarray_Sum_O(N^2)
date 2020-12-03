@@ -1,0 +1,45 @@
+# Finding Max sub array sum in order of N^2 time using cummulative sum
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(int argc, char** argv) {
+	int N; 
+	int curr_sum = 0 , max_sum = INT_MIN ;
+	int left , right ;
+	cin>>N;
+  int arr[N];
+	for(int i=0;i<N;i++)
+	cin>>arr[i];
+	
+	// Creating array for cummulative sum
+	int csum[N]={0};
+	csum[0] = arr[0];
+	for(int i=1;i<N;i++){
+		csum[i] = csum[i-1]+arr[i];
+	}
+	
+	for(int i = 0; i<N; i++)
+	{
+		for(int j= i ; j<  N ; j++)
+		{
+			if( i > 0  )
+			{
+			curr_sum = csum[j] - csum[i-1];  
+		 }
+			else
+			{
+			curr_sum = csum[i];
+      }
+			
+		if(curr_sum > max_sum){
+			max_sum = curr_sum;
+			left = i;
+			right = j;
+		}	
+		}
+	}
+	cout<<"maximum sum is "<<max_sum<<endl;
+	cout<<"interval in which max_sum lies ("<<left<<" , "<<right<<")"<<endl;
+	return 0;
+}
