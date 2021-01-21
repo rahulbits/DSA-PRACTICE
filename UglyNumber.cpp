@@ -1,3 +1,5 @@
+Leet Code UGLY NUMBER
+
 if(num < 1)
             return false;
         while(num%2==0) num/=2;
